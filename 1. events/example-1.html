@@ -24,7 +24,7 @@
         
         const button1 = document.getElementById("btn-example");
         const button2 = document.getElementById("btn-example2");
-
+        
         button1.addEventListener("click", function(){
             // console.log(this)
             this.style.backgroundColor = "red";
@@ -34,7 +34,7 @@
         button2.addEventListener("click", inverseStyle);
 
         function inverseStyle(){
-            // console.log(this)
+            console.log(this)
             this.style.backgroundColor = "red";
             this.style.color = "white";
         }

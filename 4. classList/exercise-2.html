@@ -62,7 +62,16 @@
  (чтобы не получилось два красных пункта меню)  -->
    
     <script>
-
+        const topMenuItems = document.querySelectorAll(".navbar-nav-link");
+        topMenuItems.forEach(link => link.addEventListener("click", function(){
+            const prevActiveLink = this.closest(".navbar-nav").querySelector(".active");
+            console.log(prevActiveLink)
+            if(prevActiveLink){
+                prevActiveLink.classList.remove("active");
+            }
+            // topMenuItems.forEach(elem => elem.classList.remove("active"))
+            this.classList.add("active")
+        }));
     </script>
 </body>
 

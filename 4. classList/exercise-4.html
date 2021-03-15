@@ -85,7 +85,22 @@
 "close" в модальном окне оно закрывалось. -->
 
     <script>
+        const buttonsOpenModal = document.querySelectorAll(".btn-modal");
+        buttonsOpenModal.forEach(button => button.addEventListener("click", openModal));
 
+        const buttonsCloseModal = document.querySelectorAll(".modal .close")
+        buttonsCloseModal.forEach(button => button.addEventListener("click", closeModal));
+
+        function openModal(){
+            const {target} = this.dataset;
+            const modal = document.querySelector(target);
+            modal.classList.add("show");
+        }
+
+        function closeModal(){
+            const modal = this.closest(".modal");
+            modal.classList.remove("show")
+        }
 
     </script>
 

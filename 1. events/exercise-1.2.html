@@ -28,19 +28,19 @@
     <script> 
         const button = document.getElementById("first-button");
 
-
+        const reverseStyle = function(elem, oldStyles, newStyles){
+          const currentStyles = Object.values(elem.style).filter(item => item !== "");
+          const oldStylesValues = Object.values(oldStyles);
+          if(currentStyles.toString() !== newStyles.toString()) {
+            for(const [key, values] of Object.entries())
+          }
+        };
 
         button.addEventListener("click", function(){
-            if(this.style.backgroundColor) {
-                this.style.backgroundColor = "";
-                this.style.color = "green";
-            }
-            else {
-                this.style.backgroundColor = "green";
-                this.style.color = "white";
-            }
+          reverseStyle(this, {backgroundColor: "white", color: "green"}, {backgroundColor: "green", color: "white"})
         });
 
+        
         
     </script>
 </body>

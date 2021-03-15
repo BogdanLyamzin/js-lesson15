@@ -65,8 +65,10 @@
 
         topMenuItems.forEach(elem => elem.addEventListener("click", function(){
             const menu = this.closest("ul");
-            const menuLinks = menu.querySelectorAll("a");
-            menuLinks.forEach(item => item.style.backgroundColor = "");
+            const prevActiveElement = menu.querySelector(`a[style="background-color: red;"]`);
+            if(prevActiveElement) {
+                prevActiveElement.style.backgroundColor = "";
+            }
             this.style.backgroundColor = "red";
         }));
         

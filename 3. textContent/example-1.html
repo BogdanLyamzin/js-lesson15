@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Document</title>
 </head>
-<body>
+<style>
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 15px 10px;
+        color: red;
+        border: 1px solid red;
+        border-radius: 5px;
+    }
 
+</style>
+
+<body>
+    <a id="btn-example" href="#" class="btn"><span>Click me!</span></a>
+    <script>
+        const button = document.getElementById("btn-example");
+        button.addEventListener("click", function(){
+            console.log(`На кнопке было написано ${this.textContent}`);
+            this.textContent = "Eat me!";
+        })
+
+    </script>
 </body>
+
 </html>

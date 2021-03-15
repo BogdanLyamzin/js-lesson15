@@ -19,6 +19,7 @@
     .btn.active {
         background-color: red;
         color: white;
+        padding: 20px 15px;
     }
 
 </style>
@@ -32,8 +33,8 @@
         const button2 = document.getElementById("btn-example2");
 
         button1.addEventListener("click", function(){
-            console.log(this.classList);
-            if(!this.className.includes("active")) {
+            // console.log(this.classList);
+            if(!this.classList.contains("active")) {
                 this.classList.add("active");
             }
             else {
@@ -45,7 +46,7 @@
 
         function inverseStyle(){
             console.log(this.classList);
-            if(!this.className.includes("active")) {
+            if(!this.classList.contains("active")) {
                 this.classList.add("active");
             }
             else {

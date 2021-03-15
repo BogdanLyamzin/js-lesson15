@@ -136,9 +136,9 @@
 
 <body>
     <div class="page-wrapper">
-        <a href="#" class="btn modal-btn">Open first modal</a>
-        <a href="#" class="btn modal-btn">Open second modal</a>
-        <a href="#" class="btn modal-btn">Open third modal</a>
+        <a href="#" class="btn modal-btn" data-target="#first-modal">Open first modal</a>
+        <a href="#" class="btn modal-btn" data-target="#second-modal">Open second modal</a>
+        <a href="#" class="btn modal-btn" data-target="#third-modal">Open third modal</a>
     </div>
 
     <div id="first-modal" class="modal-wrapper">
@@ -187,7 +187,26 @@
 Менять разметку HTML можно. -->
    
     <script>
+        const modalButtons = document.querySelectorAll(".modal-btn");
 
+        modalButtons.forEach(button => button.addEventListener("click", openModal));
+
+        const closeModalButtons = document.querySelectorAll(".modal-wrapper .btn-close");
+
+        closeModalButtons.forEach(button => button.addEventListener("click", closeModal));
+
+        function openModal(){
+            // const selector = this.dataset.target;
+            // const modal = document.querySelector(selector);
+            const {target} = this.dataset;
+            const modal = document.querySelector(target);
+            modal.classList.add("open");
+        }
+
+        function closeModal(){
+            const modal = this.closest(".modal-wrapper");
+            modal.classList.remove("open")
+        }
     </script>
 
 </body>

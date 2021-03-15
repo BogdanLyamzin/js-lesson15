@@ -33,26 +33,21 @@
 
 <body>
     <div class="top-menu">
-        <ul class="navbar-nav" id="top-menu">
-            <li class="navbar-nav-item">
+        <div class="navbar-nav" id="top-menu">
+
                 <a href="#" class="navbar-nav-link">HOME</a>
-            </li>
-            <li class="navbar-nav-item">
+
                 <a href="#" class="navbar-nav-link">ABOUT US</a>
-            </li>
-            <li class="navbar-nav-item">
+
                 <a href="#" class="navbar-nav-link">OUR FEATURES</a>
-            </li>
-            <li class="navbar-nav-item">
+
                 <a href="#" class="navbar-nav-link">OUR WORKS</a>
-            </li>
-            <li class="navbar-nav-item">
+
                 <a href="#" class="navbar-nav-link">BLOG</a>
-            </li>
-            <li class="navbar-nav-item">
+
                 <a href="#" class="navbar-nav-link">CONTACT US</a>
-            </li>
-        </ul>
+
+        </div>
     </div>
 
 <!-- Напишите код, который работает так: при клике на пункт меню
@@ -64,9 +59,7 @@
         const topMenuItems = document.querySelectorAll(".navbar-nav-link");
 
         topMenuItems.forEach(elem => elem.addEventListener("click", function(){
-            const menu = this.closest("ul");
-            const menuLinks = menu.querySelectorAll("a");
-            menuLinks.forEach(item => item.style.backgroundColor = "");
+            this.closest().querySelector("")
             this.style.backgroundColor = "red";
         }));
         

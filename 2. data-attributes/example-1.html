@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Document</title>
 </head>
-<body>
+<style>
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 15px 10px;
+        color: red;
+        border: 1px solid red;
+        border-radius: 5px;
+    }
 
+</style>
+
+<body>
+    <a id="btn-example" href="#" class="btn" data-full-name="Button full name" data-name="Click button">Click me!</a>
+    <script>
+        
+        const button1 = document.getElementById("btn-example");
+        
+        button1.addEventListener("click", function(){
+            // const buttonName = this.getAttribute("data-name");
+            // this.setAttribute("href", "https://google.com/");
+            // this.href = "https://google.com/"
+            // const buttonName = this.dataset.name;
+            // const buttonFullName = this.dataset.fullName;
+            const {name} = this.dataset;
+            // alert(`Вы нажали ${buttonName}`);
+            alert(`Вы нажали ${name}`);
+            this.dataset.info = "Some info";
+        });
+
+       
+
+    </script>
 </body>
+
 </html>

@@ -64,7 +64,7 @@
     <h2>Modal Example</h2>
 
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
+    <button id="myBtn" data-target="#myModal">Open Modal</button>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -83,7 +83,22 @@
 
     <script>
 
+        const buttonOpenModal = document.getElementById("myBtn")
 
+        buttonOpenModal.addEventListener("click", function(){
+            // console.log(this.dataset)
+            const selector = this.dataset.target;
+            const modal = document.querySelector(selector);
+            // const {target} = this.dataset;
+            // const modal = document.querySelector(target);
+            modal.style.display = "block"
+        });
+
+        const buttonCloseModal = document.querySelector(".modal .close");
+        buttonCloseModal.addEventListener("click", function(){
+            const modal = this.closest(".modal");
+            modal.style.display = "none";
+        })
     </script>
 
 

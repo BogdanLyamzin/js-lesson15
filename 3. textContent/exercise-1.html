@@ -38,16 +38,31 @@
 
 <body>
     <a href="#" class="btn btn-collapse" data-info="род злодеев и апокалиптических маньяков, регулярно пытающийся захватить мир или сделать ещё что-то столь же «весёлое» (по мнению их верных монстров — ягеров).">Семья Гетеродин</a>
-    <p class="collapse"> </p>
+    <p class="collapse"></p>
     <a href="#" class="btn btn-collapse" data-info="Родовое поместье — замок Вульфенбах, сначала просто замок, потом — гигантский дирижабль. Создатель Pax Transilvania">Род Вульфенбах</a>
     <p class="collapse"></p>
     <a href="#" class="btn btn-collapse" data-info="Интриганы, специалисты по генной инженерии, члены ордена Рыцарей Юпитера. Из этой семьи происходит мать ГГ.">Род Монгфиш</a>
-    <p class="collapse"> </p>
+    <p class="collapse"></p>
     <!-- Сделайте появляющиеся при клике подсказки.
     1. При первом клике на элемент с классом btn-collapse в p с классом collapse
     рядом с ним должен записываться текст из атрибута data-info кнопки.
     2. При повторном клике на кнопку - текст из p должен исчезать. -->
     <script>
+        const buttonsCollapse = document.querySelectorAll(".btn-collapse");
+        buttonsCollapse.forEach(button => button.addEventListener("click", collapse));
 
+        function collapse(){
+            const info = this.dataset.info;
+            const next = this.nextElementSibling;
+
+            if(next.textContent === "") {
+                next.textContent = info;
+            }
+            else {
+                next.textContent = ""
+            }
+            // next.textContent = (next.textContent) ? "" : info;
+            
+        }
     </script>
 </body></html>
