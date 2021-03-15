@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 15px 10px;
+        color: red;
+        border: 1px solid red;
+        border-radius: 5px;
+    }
+
+</style>
+
+<body>
+    <a id="btn-example" href="#" class="btn">Click me!</a>
+    <a id="btn-example2" href="#" class="btn">Eat me!</a>
+    <script>
+        
+        const button1 = document.getElementById("btn-example");
+        const button2 = document.getElementById("btn-example2");
+
+        button1.addEventListener("click", function(){
+            // console.log(this)
+            this.style.backgroundColor = "red";
+            this.style.color = "white";
+        });
+
+        button2.addEventListener("click", inverseStyle);
+
+        function inverseStyle(){
+            // console.log(this)
+            this.style.backgroundColor = "red";
+            this.style.color = "white";
+        }
+
+    </script>
+</body>
+
+</html>

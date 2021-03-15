@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  display: none;
+}
+  .tablinks.active {
+    background: #555;
+    color: white
+  }
+
+
+.tabcontent.active {
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks active">Первая вкладка</button>
+  <button class="tablinks">Вторая вкладка</button>
+  <button class="tablinks">Третья вкладка</button>
+</div>
+
+<div id="London" class="tabcontent active">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent hide">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent hide">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<!-- Напишите код, который работает так: при клике на название вкладки ее фон меняется на #ccc и открывается соотвествующая по номеру владка (div с классом tabcontent становится видимым). То есть при клике на button с текстом "Вторая вкладка" становится видимым div с описанием Парижа.
+Менять HTML-разметку можно. 
+Дополнительное задание для гениев: сделайте код универсальным и не требующим перекрестных ссылок между названием вкладки и ее содержимым. -->
+
+<script>
+
+</script>
+   
+</body>
+</html> 

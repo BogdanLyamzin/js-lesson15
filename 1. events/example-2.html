@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 15px 10px;
+        color: red;
+        border: 1px solid red;
+        border-radius: 5px;
+    }
+
+</style>
+
+<body>
+<a id="btn-example" href="#" class="btn">Click me!</a>
+<script>
+
+    const button = document.getElementById("btn-example");
+
+    button.addEventListener("mouseover", function(){
+        this.style.backgroundColor = "red";
+        this.style.color = "white";
+    });
+
+    button.addEventListener("mouseout", inverseStyle);
+
+    function inverseStyle(){
+        // console.log(this)
+        this.style.backgroundColor = "white";
+        this.style.color = "red";
+    }
+
+</script>
+</body>
+
+</html>
